@@ -8,7 +8,17 @@
     {
       "nombre": "Angel",
       "email": "angel@alura.com",
-      "id": 1
+      "id": 2
+    },
+    {
+      "nombre": "Dulce",
+      "email": "dulce@alura.com",
+      "id": "b0a11b4e-5208-4319-b781-308b7b2104c8"
+    },
+    {
+      "nombre": "Daniel",
+      "email": "daniel@alura.com",
+      "id": "1905500e-1fd2-4196-a86e-03b3cb1d2bd3"
     }
   ]
 }

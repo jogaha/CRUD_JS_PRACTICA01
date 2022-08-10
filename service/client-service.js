@@ -1,3 +1,5 @@
+//Promesas permiten trabajar de manera asincrona(no se tiene que esperar algun resultado para poder seguir utilizando el programa)
+
 //abrir http (metodo,url)
 //CRUD (Create, Read, Update, Delete)
 //Metodos (POST,GET,PUT/PATCH,DELETE)
@@ -25,8 +27,28 @@
 const listaClientes = () =>
   fetch("http://localhost:3000/perfil").then((respuesta) => respuesta.json());
 
-//Promesas permiten trabajar de manera asincrona(no se tiene que esperar algun resultado para poder seguir utilizando el programa)
+const crearCliente = (nombre, email) => {
+  return fetch("http://localhost:3000/perfil", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      nombre,
+      email,
+      id: uuid.v4(),
+    }),
+  });
+};
+
+const eliminarCliente = (id) => {
+  return fetch(`http://localhost:3000/perfil/${id}`, {
+    method: "DELETE",
+  });
+};
 
 export const clientServices = {
   listaClientes,
+  crearCliente,
+  eliminarCliente,
 };
